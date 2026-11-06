@@ -1,1 +1,65 @@
-/* Start coding here */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* แถบหัวข้อด้านบนสีเทา */
+.header {
+    background-color: #7d7d7d;
+    color: #ffffff;
+    padding: 15px 25px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* คอนเทนเนอร์แสดงกล่องแชท */
+.chat-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* สไตล์พื้นฐานของบอลลูนข้อความ */
+.message {
+    max-width: 200px;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* ข้อความฝั่งซ้าย (Received/Incoming) */
+.message.incoming {
+    align-self: flex-start;
+    background-color: #7d7d7d;
+    color: #ffffff;
+}
+
+/* ข้อความฝั่งขวา (Sent/Outgoing) */
+.message.outgoing {
+    align-self: flex-end;
+}
+
+.message.outgoing.green {
+    background-color: #00c800;
+    color: #ffffff;
+}
+
+.message.outgoing.gray {
+    background-color: #e2dfdf;
+    color: #333333;
+}
